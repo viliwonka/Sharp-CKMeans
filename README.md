@@ -34,12 +34,15 @@ For all functions, arguments are `(number[] x, number[] y, int Kmin, int Kmax, M
 * method is what method to use for calculation (Linear, LogLinear, Quadratic). LogLinear is fastest.
 
 
-Tutorial "Optimal univariate clustering" (for R)
+Tutorial "Optimal univariate clustering" (for R):
+
 https://cran.r-project.org/web/packages/Ckmeans.1d.dp/vignettes/Ckmeans.1d.dp.html
 
 Original page for this library:
+
 https://cran.r-project.org/web/packages/Ckmeans.1d.dp/index.html
 Original Github mirror:
+
 https://github.com/cran/Ckmeans.1d.dp
 
 ### Log-Likelihood
