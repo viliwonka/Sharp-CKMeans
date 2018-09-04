@@ -17,24 +17,6 @@ namespace Sharp.CKMeans
 
     public static class Main
     {
-        /*
-           x: An array containing input data to be clustered.
-           length: length of the one dimensional array.
-           minK: Minimum number of clusters.
-           maxK: Maximum number of clusters.
-           cluster:  An array of cluster IDs for each point in x.
-           centers:  An array of centers for each cluster.
-           withinss: An array of within-cluster sum of squares for each cluster.
-           size:     An array of (weighted) sizes of each cluster.
-        */
-
-        /*double *x, int* length, double *y, int * ylength,
-                     int* minK, int *maxK, int* cluster,
-                     double* centers, double* withinss, double * size, // int* size,
-                     double* BICs,
-                     string estimate_k, string method
-                     */
-
 
         public class CKResult
         {
@@ -53,44 +35,6 @@ namespace Sharp.CKMeans
                 BIC = bic;
             }
         }
-
-        /*
-         #Call external C++ function
-              if(criterion == "L2") {
-                result <- .C("Ckmeans_1d_dp", PACKAGE="Ckmeans.1d.dp",
-                             data=as.double(x), length=as.integer(length(x)),
-                             weight=as.double(y), weight_length=as.integer(length(y)),
-                             Kmin=as.integer(k.min), Kmax=as.integer(k.max),
-                             cluster=as.integer(clusters), centers=as.double(center),
-                             withinss=as.double(withinss), size=as.double(size), # size=as.integer(size),
-                             BIC=as.double(BIC),
-                             estimate.k=as.character(estimate.k),
-                             method=as.character(method))
-                class <- "Ckmeans.1d.dp"
-              } else if (criterion == "L1") {
-                result <- .C("Ckmedian_1d_dp", PACKAGE="Ckmeans.1d.dp",
-                             data=as.double(x), length=as.integer(length(x)),
-                             weight=as.double(y), weight_length=as.integer(length(y)),
-                             Kmin=as.integer(k.min), Kmax=as.integer(k.max),
-                             cluster=as.integer(clusters), centers=as.double(center),
-                             withinss=as.double(withinss), size=as.double(size), # size=as.integer(size),
-                             BIC=as.double(BIC),
-                             estimate.k=as.character(estimate.k),
-                             method=as.character(method))
-                class <- "Ckmedian.1d.dp"
-              } else if(criterion == "L2Y") {
-                result <- .C("Cksegs_1d_dp", PACKAGE="Ckmeans.1d.dp",
-                             data=as.double(x), length=as.integer(length(x)),
-                             weight=as.double(y), weight_length=as.integer(length(y)),
-                             Kmin=as.integer(k.min), Kmax=as.integer(k.max),
-                             cluster=as.integer(clusters), centers=as.double(center),
-                             withinss=as.double(withinss), size=as.double(size), # size=as.integer(size),
-                             BIC=as.double(BIC),
-                             estimate.k=as.character(estimate.k),
-                             method=as.character(method))
-                class <- "Cksegs.1d.dp"
-              }
-        */
 
         //L2
         public static CKResult CKMeans1D(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.LogLinear)

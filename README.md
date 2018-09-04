@@ -33,6 +33,14 @@ For all functions, arguments are `(number[] x, number[] y, int Kmin, int Kmax, M
 * `Kmax` is maximal number of clusters
 * `method` is what method to use for calculation (`Linear`, `LogLinear`, `Quadratic`). `LogLinear` is fastest.
 
+All functions return `CKResult` object, which contains:
+
+* int[] Clusters is an array of cluster IDs for each point in x,
+* number[] Centers is an array of centers for each cluster
+* number[] Withinss is an array of within-cluster sum of squares for each cluster
+* number[] Sizes is an array of (weighted) sizes of each cluster
+* double[] BIC is Bayesian Information Criterion
+
 [Tutorial "Optimal univariate clustering" (for R)](https://cran.r-project.org/web/packages/Ckmeans.1d.dp/vignettes/Ckmeans.1d.dp.html)
 
 ### Log-Likelihood
