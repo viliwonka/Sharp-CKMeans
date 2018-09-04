@@ -93,7 +93,7 @@ namespace Sharp.CKMeans
         */
 
         //L2
-        public static CKResult CKMeans1D(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.Linear)
+        public static CKResult CKMeans1D(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.LogLinear)
         {
             int[] clusters;
             number[] centers;
@@ -109,7 +109,7 @@ namespace Sharp.CKMeans
         }
 
         //L1
-        public static CKResult CKMedian1D(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.Linear)
+        public static CKResult CKMedian1D(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.LogLinear)
         {
             int[] clusters;
             number[] centers;
@@ -125,7 +125,7 @@ namespace Sharp.CKMeans
         }
 
         //L2Y
-        public static CKResult CKSegs1D(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.Linear)
+        public static CKResult CKSegs1D(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.LogLinear)
         {
             int[] clusters;
             number[] centers;
