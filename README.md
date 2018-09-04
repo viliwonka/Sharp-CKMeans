@@ -1,5 +1,5 @@
 # Sharp-CKMeans
-CKMeans ported to C# (from C++)
+CKMeans ported to C# (from C++). Used in R language.
 
 ## What is this?
 
@@ -33,17 +33,7 @@ For all functions, arguments are `(number[] x, number[] y, int Kmin, int Kmax, M
 * `Kmax` is maximal number of clusters
 * `method` is what method to use for calculation (`Linear`, `LogLinear`, `Quadratic`). `LogLinear` is fastest.
 
-
-Tutorial "Optimal univariate clustering" (for R):
-
-https://cran.r-project.org/web/packages/Ckmeans.1d.dp/vignettes/Ckmeans.1d.dp.html
-
-Original page for this library:
-
-https://cran.r-project.org/web/packages/Ckmeans.1d.dp/index.html
-Original Github mirror:
-
-https://github.com/cran/Ckmeans.1d.dp
+[Tutorial "Optimal univariate clustering" (for R)](https://cran.r-project.org/web/packages/Ckmeans.1d.dp/vignettes/Ckmeans.1d.dp.html)
 
 ### Log-Likelihood
 
@@ -52,3 +42,9 @@ Logarithm/Exponent (log likelihood) calculation is done with doubles (64-bit in 
 I added tests for CKMeans (not CKMedian and others!) and it works as expected, but if you experience irregularities, you need to convert log-likelihood calculation part of code to higher precision. I tried with `decimal` but it threw `out of range` errors! 
 
 It's short part of code, it's present in `NonWeighted.cs` at line 150 and `Weighted.cs` at line 145.
+
+### Original sources
+
+[Original page for this library](https://cran.r-project.org/web/packages/Ckmeans.1d.dp/index.html)
+
+[Original Github mirror](https://github.com/cran/Ckmeans.1d.dp)
