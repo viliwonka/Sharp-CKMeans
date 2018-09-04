@@ -27,11 +27,11 @@ What you have available is `Main.CKMeans1D(...)`, `Main.CKMedian1D(...)`, `Main.
 
 For all functions, arguments are `(number[] x, number[] y, int Kmin, int Kmax, Method method = Method.Linear)`.
 
-> x are points / positions
-> y are weights
-> Kmin is minimal number of clusters
-> Kmax is maximal number of clusters
-> method is what method to use for calculation (Linear, LogLinear, Quadratic). LogLinear is fastest.
+* x are points / positions
+* y are weights
+* Kmin is minimal number of clusters
+* Kmax is maximal number of clusters
+* method is what method to use for calculation (Linear, LogLinear, Quadratic). LogLinear is fastest.
 
 
 Tutorial "Optimal univariate clustering" (for R)
