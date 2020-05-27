@@ -1,5 +1,5 @@
 # Sharp-CKMeans
-CKMeans ported to C# (from C++). Used in R language.
+CKMeans ported from C++ to C#, originally used in R language.
 
 ## What is this?
 
